@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		861F66172753F0F5006E6295 /* WalletsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F66162753F0F5006E6295 /* WalletsView.swift */; };
+		861F66192753FEE1006E6295 /* AddWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F66182753FEE1006E6295 /* AddWalletView.swift */; };
+		861F661B27554F73006E6295 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F661A27554F73006E6295 /* Helpers.swift */; };
+		861F661D2755522A006E6295 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F661C2755522A006E6295 /* AvatarView.swift */; };
+		862133072753E3E8002BD765 /* lil_walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133062753E3E8002BD765 /* lil_walletApp.swift */; };
+		862133092753E3E8002BD765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133082753E3E8002BD765 /* ContentView.swift */; };
+		8621330B2753E3EA002BD765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8621330A2753E3EA002BD765 /* Assets.xcassets */; };
+		8621330E2753E3EA002BD765 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8621330D2753E3EA002BD765 /* Preview Assets.xcassets */; };
+		862133102753E3EA002BD765 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621330F2753E3EA002BD765 /* Persistence.swift */; };
+		862133132753E3EA002BD765 /* lil_wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 862133112753E3EA002BD765 /* lil_wallet.xcdatamodeld */; };
+		862133222753E474002BD765 /* CryptoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133212753E474002BD765 /* CryptoListItem.swift */; };
+		862133242753E47E002BD765 /* ActivityListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133232753E47E002BD765 /* ActivityListItem.swift */; };
+		862133262753E485002BD765 /* ObjectGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133252753E485002BD765 /* ObjectGridItem.swift */; };
+		862133282753E48F002BD765 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133272753E48F002BD765 /* CoinsView.swift */; };
+		8621332A2753E4A1002BD765 /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133292753E4A0002BD765 /* ObjectsView.swift */; };
+		8621332C2753E4B5002BD765 /* CryptoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621332B2753E4B5002BD765 /* CryptoDetailView.swift */; };
+		8621332E2753E4BD002BD765 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621332D2753E4BD002BD765 /* ActivityDetailView.swift */; };
+		862133302753E4C3002BD765 /* ObjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621332F2753E4C3002BD765 /* ObjectDetailView.swift */; };
+		862133322753E4CA002BD765 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133312753E4CA002BD765 /* SettingsView.swift */; };
+		862133342753E4D6002BD765 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133332753E4D6002BD765 /* ActivityView.swift */; };
+		8675CF1BFB14E5DB85FC19DB /* Pods_lil_wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */; };
+		86F4D61927694FC3005094BE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4D61827694FC3005094BE /* Data.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lil wallet.debug.xcconfig"; path = "Target Support Files/Pods-lil wallet/Pods-lil wallet.debug.xcconfig"; sourceTree = "<group>"; };
+		5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lil wallet.release.xcconfig"; path = "Target Support Files/Pods-lil wallet/Pods-lil wallet.release.xcconfig"; sourceTree = "<group>"; };
+		861F66162753F0F5006E6295 /* WalletsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsView.swift; sourceTree = "<group>"; };
+		861F66182753FEE1006E6295 /* AddWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletView.swift; sourceTree = "<group>"; };
+		861F661A27554F73006E6295 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		861F661C2755522A006E6295 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		862133032753E3E8002BD765 /* lil wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lil wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		862133062753E3E8002BD765 /* lil_walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lil_walletApp.swift; sourceTree = "<group>"; };
+		862133082753E3E8002BD765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8621330A2753E3EA002BD765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8621330D2753E3EA002BD765 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8621330F2753E3EA002BD765 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		862133122753E3EA002BD765 /* lil_wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lil_wallet.xcdatamodel; sourceTree = "<group>"; };
+		862133212753E474002BD765 /* CryptoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoListItem.swift; path = "lil wallet/Components/CryptoListItem.swift"; sourceTree = SOURCE_ROOT; };
+		862133232753E47E002BD765 /* ActivityListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListItem.swift; sourceTree = "<group>"; };
+		862133252753E485002BD765 /* ObjectGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectGridItem.swift; sourceTree = "<group>"; };
+		862133272753E48F002BD765 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
+		862133292753E4A0002BD765 /* ObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsView.swift; sourceTree = "<group>"; };
+		8621332B2753E4B5002BD765 /* CryptoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailView.swift; sourceTree = "<group>"; };
+		8621332D2753E4BD002BD765 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		8621332F2753E4C3002BD765 /* ObjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailView.swift; sourceTree = "<group>"; };
+		862133312753E4CA002BD765 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		862133332753E4D6002BD765 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		86F4D61827694FC3005094BE /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lil_wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		862133002753E3E8002BD765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8675CF1BFB14E5DB85FC19DB /* Pods_lil_wallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		604CB4919C9980767A5E5086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		861F66152753F0E3006E6295 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				862133312753E4CA002BD765 /* SettingsView.swift */,
+				861F66162753F0F5006E6295 /* WalletsView.swift */,
+				861F66182753FEE1006E6295 /* AddWalletView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		862132FA2753E3E8002BD765 = {
+			isa = PBXGroup;
+			children = (
+				862133052753E3E8002BD765 /* lil wallet */,
+				862133042753E3E8002BD765 /* Products */,
+				AA1F3C6286DFB89F2C6DAE6D /* Pods */,
+				604CB4919C9980767A5E5086 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		862133042753E3E8002BD765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				862133032753E3E8002BD765 /* lil wallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		862133052753E3E8002BD765 /* lil wallet */ = {
+			isa = PBXGroup;
+			children = (
+				862133192753E41D002BD765 /* Data */,
+				8621331E2753E458002BD765 /* Components */,
+				8621331B2753E42F002BD765 /* Views */,
+				862133062753E3E8002BD765 /* lil_walletApp.swift */,
+				862133082753E3E8002BD765 /* ContentView.swift */,
+				8621330A2753E3EA002BD765 /* Assets.xcassets */,
+				8621330F2753E3EA002BD765 /* Persistence.swift */,
+				862133112753E3EA002BD765 /* lil_wallet.xcdatamodeld */,
+				8621330C2753E3EA002BD765 /* Preview Content */,
+			);
+			path = "lil wallet";
+			sourceTree = "<group>";
+		};
+		8621330C2753E3EA002BD765 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8621330D2753E3EA002BD765 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		862133192753E41D002BD765 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86F4D61827694FC3005094BE /* Data.swift */,
+				861F661A27554F73006E6295 /* Helpers.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8621331B2753E42F002BD765 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				861F66152753F0E3006E6295 /* Settings */,
+				8621331D2753E440002BD765 /* Detail */,
+				8621331C2753E43C002BD765 /* Tabs */,
+				862133332753E4D6002BD765 /* ActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8621331C2753E43C002BD765 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				862133272753E48F002BD765 /* CoinsView.swift */,
+				862133292753E4A0002BD765 /* ObjectsView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		8621331D2753E440002BD765 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8621332B2753E4B5002BD765 /* CryptoDetailView.swift */,
+				8621332D2753E4BD002BD765 /* ActivityDetailView.swift */,
+				8621332F2753E4C3002BD765 /* ObjectDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8621331E2753E458002BD765 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				861F661C2755522A006E6295 /* AvatarView.swift */,
+				862133212753E474002BD765 /* CryptoListItem.swift */,
+				862133232753E47E002BD765 /* ActivityListItem.swift */,
+				862133252753E485002BD765 /* ObjectGridItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AA1F3C6286DFB89F2C6DAE6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */,
+				5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		862133022753E3E8002BD765 /* lil wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 862133162753E3EA002BD765 /* Build configuration list for PBXNativeTarget "lil wallet" */;
+			buildPhases = (
+				C7B95408102ECB6AFD7026E2 /* [CP] Check Pods Manifest.lock */,
+				862132FF2753E3E8002BD765 /* Sources */,
+				862133002753E3E8002BD765 /* Frameworks */,
+				862133012753E3E8002BD765 /* Resources */,
+				F03BC267DA2CBD5F4CF71B64 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lil wallet";
+			productName = "lil wallet";
+			productReference = 862133032753E3E8002BD765 /* lil wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		862132FB2753E3E8002BD765 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					862133022753E3E8002BD765 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 862132FE2753E3E8002BD765 /* Build configuration list for PBXProject "lil wallet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 862132FA2753E3E8002BD765;
+			productRefGroup = 862133042753E3E8002BD765 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				862133022753E3E8002BD765 /* lil wallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		862133012753E3E8002BD765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8621330E2753E3EA002BD765 /* Preview Assets.xcassets in Resources */,
+				8621330B2753E3EA002BD765 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7B95408102ECB6AFD7026E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lil wallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F03BC267DA2CBD5F4CF71B64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		862132FF2753E3E8002BD765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862133242753E47E002BD765 /* ActivityListItem.swift in Sources */,
+				862133132753E3EA002BD765 /* lil_wallet.xcdatamodeld in Sources */,
+				8621332E2753E4BD002BD765 /* ActivityDetailView.swift in Sources */,
+				862133222753E474002BD765 /* CryptoListItem.swift in Sources */,
+				862133262753E485002BD765 /* ObjectGridItem.swift in Sources */,
+				8621332C2753E4B5002BD765 /* CryptoDetailView.swift in Sources */,
+				862133322753E4CA002BD765 /* SettingsView.swift in Sources */,
+				861F661D2755522A006E6295 /* AvatarView.swift in Sources */,
+				862133342753E4D6002BD765 /* ActivityView.swift in Sources */,
+				8621332A2753E4A1002BD765 /* ObjectsView.swift in Sources */,
+				862133102753E3EA002BD765 /* Persistence.swift in Sources */,
+				862133092753E3E8002BD765 /* ContentView.swift in Sources */,
+				862133072753E3E8002BD765 /* lil_walletApp.swift in Sources */,
+				861F661B27554F73006E6295 /* Helpers.swift in Sources */,
+				861F66192753FEE1006E6295 /* AddWalletView.swift in Sources */,
+				861F66172753F0F5006E6295 /* WalletsView.swift in Sources */,
+				86F4D61927694FC3005094BE /* Data.swift in Sources */,
+				862133282753E48F002BD765 /* CoinsView.swift in Sources */,
+				862133302753E4C3002BD765 /* ObjectDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		862133142753E3EA002BD765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		862133152753E3EA002BD765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		862133172753E3EA002BD765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lil wallet/Preview Content\"";
+				DEVELOPMENT_TEAM = M89B9TMDBQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jordansinger.lil-wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		862133182753E3EA002BD765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lil wallet/Preview Content\"";
+				DEVELOPMENT_TEAM = M89B9TMDBQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jordansinger.lil-wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		862132FE2753E3E8002BD765 /* Build configuration list for PBXProject "lil wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				862133142753E3EA002BD765 /* Debug */,
+				862133152753E3EA002BD765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		862133162753E3EA002BD765 /* Build configuration list for PBXNativeTarget "lil wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				862133172753E3EA002BD765 /* Debug */,
+				862133182753E3EA002BD765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		862133112753E3EA002BD765 /* lil_wallet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				862133122753E3EA002BD765 /* lil_wallet.xcdatamodel */,
+			);
+			currentVersion = 862133122753E3EA002BD765 /* lil_wallet.xcdatamodel */;
+			path = lil_wallet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 862132FB2753E3E8002BD765 /* Project object */;
+}
