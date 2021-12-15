@@ -10,6 +10,7 @@ import SwiftUI
 struct ObjectsView: View {
     @State private var showActivityView = false
     @State private var showSettingsView = false
+    @State private var showAddWalletView = false
     @EnvironmentObject var wallet: Wallet
     @EnvironmentObject var appearance: Appearance
     @Environment(\.managedObjectContext) private var viewContext
@@ -33,11 +34,17 @@ struct ObjectsView: View {
                         Text("No wallets")
                             .foregroundColor(.secondary)
                             .font(.system(.body, design: appearance.getAppFont()))
-                        Button(action: { showSettingsView = true }, label: {
+                        Button(action: { showAddWalletView = true }, label: {
                             Text("Add wallet")
                                 .font(.headline)
                         })
                         .buttonStyle(BorderedButtonStyle())
+                        .sheet(isPresented: $showAddWalletView) {
+                            NavigationView { AddWalletView() }
+                                .environmentObject(wallet)
+                                .environmentObject(appearance)
+                                .accentColor(appearance.getAppColor())
+                        }
                         Spacer()
                     }
                 } else if wallet.objects.count == 0 && !wallet.loadingObjects {

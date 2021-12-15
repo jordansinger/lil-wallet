@@ -25,6 +25,7 @@ struct AddWalletView: View {
     @EnvironmentObject var wallet: Wallet
     @EnvironmentObject var appearance: Appearance
     @State var loading = false
+    @State var showAlert = false
     
     var body: some View {
         Form {
@@ -56,6 +57,9 @@ struct AddWalletView: View {
                     }
                 })
                 .disabled(!isValid() || self.loading)
+                .alert("Failed to load wallet", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) { }
+                }
             }
         })
         .navigationTitle("Add Wallet")
@@ -64,7 +68,7 @@ struct AddWalletView: View {
     }
     
     func autofocus() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
             self.focusedField = .name
         }
     }
@@ -120,8 +124,13 @@ struct AddWalletView: View {
                         self.loading = false
                         addWallet(address: decodedResponse.address)
                     }
+                    
+                    return
                 }
             }
+            
+            self.loading = false
+            self.showAlert = true
 
             // if we're still here it means there was a problem
             print("failed: \(error?.localizedDescription ?? "Unknown error")")

@@ -36,11 +36,17 @@ struct CoinsView: View {
                         Text("No wallets")
                             .foregroundColor(.secondary)
                             .font(.system(.body, design: appearance.getAppFont()))
-                        Button(action: { showSettingsView = true }, label: {
+                        Button(action: { showAddWalletView = true }, label: {
                             Text("Add wallet")
                                 .font(.headline)
                         })
                         .buttonStyle(BorderedButtonStyle())
+                        .sheet(isPresented: $showAddWalletView) {
+                            NavigationView { AddWalletView() }
+                                .environmentObject(wallet)
+                                .environmentObject(appearance)
+                                .accentColor(appearance.getAppColor())
+                        }
                         Spacer()
                     }
                 } else if wallet.tokens.count == 0 && !wallet.loadingTokens {
@@ -60,11 +66,11 @@ struct CoinsView: View {
                                 .listRowSeparator(.hidden)
                         }
                     }
+                    .listStyle(PlainListStyle())
+                    .refreshable {
+                        self.wallet.reload(reset: false, refresh: true)
+                    }
                 }
-            }
-            .listStyle(PlainListStyle())
-            .refreshable {
-                self.wallet.reload(reset: false, refresh: true)
             }
             .navigationTitle(wallet.formatCurrency(value: wallet.value))
             .toolbar {

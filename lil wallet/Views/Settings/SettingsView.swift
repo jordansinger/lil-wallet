@@ -60,7 +60,16 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("About")
+                        List {
+                            Section(content: {
+                                Link("Zerion", destination: URL(string: "https://docs.zerion.io")!)
+                                Link("OpenSea", destination: URL(string: "https://docs.opensea.io")!)
+                            }, header: { Text("Data") })
+                            
+                            Section(content: {
+                                Link("Jordan Singer", destination: URL(string: "https://twitter.com/jsngr")!)
+                            }, header: { Text("Contributors") })
+                        }
                     } label: {
                         Text("About")
                             .font(.system(.body, design: appFont))
