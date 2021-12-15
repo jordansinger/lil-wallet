@@ -19,7 +19,7 @@ struct ObjectGridItem: View {
                         .foregroundColor(appearance.getAppColor())
                         .aspectRatio(1, contentMode: .fill)
                     
-                    Text(object.name)
+                    Text(object.name ?? "Untitled")
                         .font(.system(.caption, design: appearance.getAppFont()))
                         .fontWeight(.semibold)
                         .foregroundColor(Color(UIColor.systemBackground))

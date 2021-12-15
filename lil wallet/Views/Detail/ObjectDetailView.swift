@@ -38,7 +38,7 @@ struct ObjectDetailView: View {
             
             Section(content: {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(object.name)
+                    Text(object.name ?? "Untitled")
                         .font(.system(.headline, design: appFont))
                     
                     if let description = object.description {
@@ -85,7 +85,7 @@ struct ObjectDetailView: View {
             })
         }
         .listStyle(InsetListStyle())
-        .navigationBarTitle(object.name)
+        .navigationBarTitle(object.name ?? "Untitled")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

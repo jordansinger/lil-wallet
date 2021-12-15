@@ -223,9 +223,9 @@ struct OpenSeaAssetsResponse: Codable {
 }
 
 class OpenSeaAsset: Codable, ObservableObject {
-    var token_id: String
+    var id: Int
     var image_url: String
-    var name: String
+    var name: String?
     var external_link: String?
     var traits: [OpenSeaAssetTrait]
     var description: String?
