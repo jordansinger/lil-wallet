@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64A4433D276AEDAA008FDC15 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 64A4433C276AEDAA008FDC15 /* SocketIO */; };
 		861F66172753F0F5006E6295 /* WalletsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F66162753F0F5006E6295 /* WalletsView.swift */; };
 		861F66192753FEE1006E6295 /* AddWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F66182753FEE1006E6295 /* AddWalletView.swift */; };
 		861F661B27554F73006E6295 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F661A27554F73006E6295 /* Helpers.swift */; };
@@ -27,13 +28,10 @@
 		862133302753E4C3002BD765 /* ObjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621332F2753E4C3002BD765 /* ObjectDetailView.swift */; };
 		862133322753E4CA002BD765 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133312753E4CA002BD765 /* SettingsView.swift */; };
 		862133342753E4D6002BD765 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133332753E4D6002BD765 /* ActivityView.swift */; };
-		8675CF1BFB14E5DB85FC19DB /* Pods_lil_wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */; };
 		86F4D61927694FC3005094BE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4D61827694FC3005094BE /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lil wallet.debug.xcconfig"; path = "Target Support Files/Pods-lil wallet/Pods-lil wallet.debug.xcconfig"; sourceTree = "<group>"; };
-		5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lil wallet.release.xcconfig"; path = "Target Support Files/Pods-lil wallet/Pods-lil wallet.release.xcconfig"; sourceTree = "<group>"; };
 		861F66162753F0F5006E6295 /* WalletsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsView.swift; sourceTree = "<group>"; };
 		861F66182753FEE1006E6295 /* AddWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletView.swift; sourceTree = "<group>"; };
 		861F661A27554F73006E6295 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 		862133312753E4CA002BD765 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		862133332753E4D6002BD765 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		86F4D61827694FC3005094BE /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lil_wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,21 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8675CF1BFB14E5DB85FC19DB /* Pods_lil_wallet.framework in Frameworks */,
+				64A4433D276AEDAA008FDC15 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		604CB4919C9980767A5E5086 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		861F66152753F0E3006E6295 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +83,6 @@
 			children = (
 				862133052753E3E8002BD765 /* lil wallet */,
 				862133042753E3E8002BD765 /* Products */,
-				AA1F3C6286DFB89F2C6DAE6D /* Pods */,
-				604CB4919C9980767A5E5086 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,15 +168,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		AA1F3C6286DFB89F2C6DAE6D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */,
-				5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,17 +175,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 862133162753E3EA002BD765 /* Build configuration list for PBXNativeTarget "lil wallet" */;
 			buildPhases = (
-				C7B95408102ECB6AFD7026E2 /* [CP] Check Pods Manifest.lock */,
 				862132FF2753E3E8002BD765 /* Sources */,
 				862133002753E3E8002BD765 /* Frameworks */,
 				862133012753E3E8002BD765 /* Resources */,
-				F03BC267DA2CBD5F4CF71B64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "lil wallet";
+			packageProductDependencies = (
+				64A4433C276AEDAA008FDC15 /* SocketIO */,
+			);
 			productName = "lil wallet";
 			productReference = 862133032753E3E8002BD765 /* lil wallet.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +215,9 @@
 				Base,
 			);
 			mainGroup = 862132FA2753E3E8002BD765;
+			packageReferences = (
+				64A4433B276AEDAA008FDC15 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 862133042753E3E8002BD765 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,48 +238,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C7B95408102ECB6AFD7026E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-lil wallet-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F03BC267DA2CBD5F4CF71B64 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lil wallet/Pods-lil wallet-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		862132FF2753E3E8002BD765 /* Sources */ = {
@@ -447,7 +387,6 @@
 		};
 		862133172753E3EA002BD765 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 081CE6CA78B31F537881F3E3 /* Pods-lil wallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,7 +416,6 @@
 		};
 		862133182753E3EA002BD765 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5026BDA625F11DFEC5361A8E /* Pods-lil wallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64A4433B276AEDAA008FDC15 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64A4433C276AEDAA008FDC15 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64A4433B276AEDAA008FDC15 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		862133112753E3EA002BD765 /* lil_wallet.xcdatamodeld */ = {
