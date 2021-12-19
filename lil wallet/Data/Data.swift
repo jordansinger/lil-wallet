@@ -32,6 +32,7 @@ class Wallet: ObservableObject {
     func formatCurrency(value: NSNumber) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
+        formatter.currencyCode = "USD"
 
         let total = Double(truncating: value)
 
