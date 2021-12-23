@@ -12,7 +12,26 @@ class Appearance: ObservableObject {
     @AppStorage("appFont") private var appFont = AppFont.regular
     
     func getAppColor() -> Color {
-        switch appColor {
+        appColor.color
+    }
+    
+    func getAppFont() -> Font.Design {
+        appFont.font
+    }
+}
+
+enum AppColor: String, Hashable, CaseIterable {
+    case monochrome
+    case red
+    case orange
+    case yellow
+    case green
+    case blue
+    case indigo
+    case purple
+    
+    var color: Color {
+        switch self {
         case .monochrome:
             return Color.primary
         case .red:
@@ -31,9 +50,16 @@ class Appearance: ObservableObject {
             return Color.purple
         }
     }
+}
+
+enum AppFont: String, Hashable, CaseIterable {
+    case regular
+    case rounded
+    case monospaced
+    case serif
     
-    func getAppFont() -> Font.Design {
-        switch appFont {
+    var font: Font.Design {
+        switch self {
         case .regular:
             return Font.Design.default
         case .rounded:
@@ -44,24 +70,6 @@ class Appearance: ObservableObject {
             return Font.Design.serif
         }
     }
-}
-
-enum AppColor: String, Hashable, CaseIterable {
-    case monochrome
-    case red
-    case orange
-    case yellow
-    case green
-    case blue
-    case indigo
-    case purple
-}
-
-enum AppFont: String, Hashable, CaseIterable {
-    case regular
-    case rounded
-    case monospaced
-    case serif
 }
 
 struct ImageView: View {

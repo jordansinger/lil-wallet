@@ -47,13 +47,14 @@ struct SettingsView: View {
                         ForEach(Array(AppColor.allCases), id: \.self) {
                             Text($0.rawValue.capitalized)
                                 .font(.system(.body, design: appFont))
+                                .foregroundColor($0 == .monochrome ? nil : $0.color)
                         }
                     }
                     
                     Picker(selection: $appFont, label: Text("Font").font(.system(.body, design: appFont))) {
                         ForEach(Array(AppFont.allCases), id: \.self) {
                             Text($0.rawValue.capitalized)
-                                .font(.system(.body, design: appFont))
+                                .font(.system(.body, design: $0.font))
                         }
                     }
                 }
