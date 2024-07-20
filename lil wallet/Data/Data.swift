@@ -44,35 +44,58 @@ class Wallet: ObservableObject {
     }
     
     func reload(reset: Bool, refresh: Bool) {
-        if reset {
-            network.disconnect()
-            
-            self.loadingTokens = true
-            self.loadingObjects = true
-            self.loadingPortfolio = true
-            self.loadingTransactions = true
-            
-            self.value = 0
-            self.tokens = []
-            self.objects = []
-            self.transactions = []
-            network.connect()
-        }
-        
-        if refresh {
-            network.disconnect()
-            // refresh wallet
-            network.connect()
-        }
-        
-        // reload wallet after updating address
-        addressSocket.on(clientEvent: .connect) { data, ack in
-            self.fetchAssets()
-        }
-        
-        self.fetchObjects()
+      if reset {
+              resetData()
+          }
+
+          if refresh {
+              refreshData()
+          }
+
+          // Reload wallet after updating address
+          setupAddressSocket()
+
+          // Fetch initial assets or objects
+          fetchObjects()
     }
-    
+
+
+   private func resetData() {
+      // Disconnect network
+      network.disconnect()
+
+      // Reset loading flags
+      loadingTokens = true
+      loadingObjects = true
+      loadingPortfolio = true
+      loadingTransactions = true
+
+      // Clear data
+      value = 0
+      tokens = []
+      objects = []
+      transactions = []
+
+      // Reconnect network
+      network.connect()
+  }
+
+  private func refreshData() {
+      // Disconnect network
+      network.disconnect()
+
+      // Refresh wallet
+      network.connect()
+  }
+
+  private func setupAddressSocket() {
+      // Handle socket event for address connection
+      addressSocket.on(clientEvent: .connect) { data, ack in
+          self.fetchAssets()
+      }
+  }
+
+
     func fetchAssets() {
         if self.currentWalletAddress != "" {
             addressSocket.emit("get", ["scope": ["assets", "portfolio", "transactions"], "payload": ["address": self.currentWalletAddress, "currency": "usd"]])
@@ -112,6 +135,7 @@ class Wallet: ObservableObject {
                 }
             }
             
+
             addressSocket.on("received address portfolio") { data, ack in
                 print("received portfolio")
                 DispatchQueue.main.async {
@@ -223,19 +247,6 @@ struct OpenSeaAssetsResponse: Codable {
     var assets: [OpenSeaAsset]
 }
 
-class OpenSeaAsset: Codable, ObservableObject {
-    var id: Int
-    var image_url: String
-    var name: String?
-    var external_link: String?
-    var traits: [OpenSeaAssetTrait]
-    var description: String?
-    var permalink: String
-    
-    func isSVG() -> Bool {
-        return self.image_url.suffix(3) == "svg"
-    }
-}
 
 struct OpenSeaAssetTrait: Codable {
     var trait_type: String
@@ -249,44 +260,6 @@ struct OpenSeaAssetTrait: Codable {
         } catch DecodingError.typeMismatch {
             let value = try container.decode(Int.self, forKey: .value)
             self.value = "\(value)"
-        }
-    }
-}
-
-class Token: ObservableObject {
-    init(id: String, name: String, symbol: String, quantity: String?, price: Price?, iconURL: String?) {
-        self.id = id
-        self.name = name
-        self.symbol = symbol
-        self.quantity = quantity
-        self.price = price
-        self.iconURL = iconURL
-    }
-    
-    var id: String
-    var name: String
-    var symbol: String
-    var quantity: String?
-    var price: Price?
-    var iconURL: String?
-    
-    func value() -> NSNumber {
-        if self.price != nil && self.quantity != nil {
-            return NSNumber(value: Double(truncating: self.price?.value ?? 0) * self.tokenQuantity())
-        } else {
-            return 0
-        }
-    }
-    
-    func tokenQuantity() -> Double {
-        return Double((self.quantity! as NSString).doubleValue) / oneETHinWEI
-    }
-    
-    func percentChange() -> String {
-        if self.price?.relative_change != nil {
-            return String(format: "%.2f", Double(truncating: self.price?.relative_change ?? 0)) + "%"
-        } else {
-            return "0%"
         }
     }
 }
@@ -306,52 +279,6 @@ struct Fee {
     
     func feeValue() -> Double {
         return Double(truncating: self.value) / oneETHinWEI
-    }
-}
-
-class Transaction: ObservableObject {
-    init(id: String, token: Token?, value: NSNumber?, price: NSNumber?, type: String, mined_at: Int, hash: String, status: String, block_number: Int, address_from: String?, address_to: String?, fee: Fee?) {
-        self.id = id
-        self.token = token
-        self.value = value
-        self.price = price
-        self.type = type
-        self.mined_at = mined_at
-        self.hash = hash
-        self.status = status
-        self.block_number = block_number
-        self.address_from = address_from
-        self.address_to = address_to
-        self.fee = fee
-    }
-    
-    var id: String
-    var token: Token?
-    var value: NSNumber?
-    var price: NSNumber?
-    var type: String
-    var mined_at: Int
-    var hash: String
-    var status: String
-    var block_number: Int
-    var address_from: String?
-    var address_to: String?
-    var fee: Fee?
-    
-    func transactionQuantity() -> Double {
-        return Double(truncating: self.value ?? 0) / oneETHinWEI
-    }
-
-    func transactionValue() -> NSNumber {
-        if self.price != nil && self.value != nil {
-            return NSNumber(value: Double(truncating: self.price ?? 0) * self.transactionQuantity())
-        } else {
-            return 0
-        }
-    }
-    
-    func title() -> String {
-        return "\(self.type.capitalized) \(self.token?.symbol.uppercased() ?? "")"
     }
 }
 

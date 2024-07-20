@@ -29,6 +29,9 @@
 		862133342753E4D6002BD765 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862133332753E4D6002BD765 /* ActivityView.swift */; };
 		8675CF1BFB14E5DB85FC19DB /* Pods_lil_wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */; };
 		86F4D61927694FC3005094BE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4D61827694FC3005094BE /* Data.swift */; };
+		D080245C2C4BBC6800BDB05F /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080245B2C4BBC6800BDB05F /* TokenData.swift */; };
+		D080245E2C4BBC9800BDB05F /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080245D2C4BBC9800BDB05F /* TransactionData.swift */; };
+		D08024602C4BBCE000BDB05F /* OpenSeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080245F2C4BBCE000BDB05F /* OpenSeaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		862133312753E4CA002BD765 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		862133332753E4D6002BD765 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		86F4D61827694FC3005094BE /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D080245B2C4BBC6800BDB05F /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		D080245D2C4BBC9800BDB05F /* TransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
+		D080245F2C4BBCE000BDB05F /* OpenSeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaData.swift; sourceTree = "<group>"; };
 		D110E75F0EAB0923BF03BCBB /* Pods_lil_wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lil_wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				86F4D61827694FC3005094BE /* Data.swift */,
+				D080245D2C4BBC9800BDB05F /* TransactionData.swift */,
+				D080245F2C4BBCE000BDB05F /* OpenSeaData.swift */,
+				D080245B2C4BBC6800BDB05F /* TokenData.swift */,
 				861F661A27554F73006E6295 /* Helpers.swift */,
 			);
 			path = Data;
@@ -309,7 +318,9 @@
 				8621332E2753E4BD002BD765 /* ActivityDetailView.swift in Sources */,
 				862133222753E474002BD765 /* CryptoListItem.swift in Sources */,
 				862133262753E485002BD765 /* ObjectGridItem.swift in Sources */,
+				D080245C2C4BBC6800BDB05F /* TokenData.swift in Sources */,
 				8621332C2753E4B5002BD765 /* CryptoDetailView.swift in Sources */,
+				D08024602C4BBCE000BDB05F /* OpenSeaData.swift in Sources */,
 				862133322753E4CA002BD765 /* SettingsView.swift in Sources */,
 				861F661D2755522A006E6295 /* AvatarView.swift in Sources */,
 				862133342753E4D6002BD765 /* ActivityView.swift in Sources */,
@@ -321,6 +332,7 @@
 				861F66192753FEE1006E6295 /* AddWalletView.swift in Sources */,
 				861F66172753F0F5006E6295 /* WalletsView.swift in Sources */,
 				86F4D61927694FC3005094BE /* Data.swift in Sources */,
+				D080245E2C4BBC9800BDB05F /* TransactionData.swift in Sources */,
 				862133282753E48F002BD765 /* CoinsView.swift in Sources */,
 				862133302753E4C3002BD765 /* ObjectDetailView.swift in Sources */,
 			);
